@@ -21,6 +21,9 @@
 			Cookie cookie1 = new Cookie("cookieID", mid);//쿠키1 생성
 			Cookie cookie2 = new Cookie("log_in", "yes");//쿠키2 생성
 			
+			//쿠키 유효 시간 설정
+			cookie1.setMaxAge(60*60*24);//24시간 동안 유효한 지속쿠키로 전환
+			
 			response.addCookie(cookie1);//생성된 쿠키를 클라이언트 웹브라우저로 보내기
 			response.addCookie(cookie2);//생성된 쿠키를 클라이언트 웹브라우저로 보내기
 			
